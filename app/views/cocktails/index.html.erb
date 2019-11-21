@@ -1,0 +1,9 @@
+<h1>Cocktails Index Page</h1>
+<ul>
+  <% @cocktails.each do |cocktail| %>
+  <li><%= link_to cocktail.name, cocktail_path(cocktail)   %></li>
+  <% end %>
+</ul>
+<%= link_to new_cocktail_path do %>
+Add a new <i class="fas fa-cocktail"></i>
+<% end %>
